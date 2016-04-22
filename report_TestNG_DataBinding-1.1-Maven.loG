@@ -1,0 +1,112 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for core:TestNG_DataBinding:jar:1.1
+[WARNING] 'version' contains an expression but should be a constant. @ core:TestNG_DataBinding:${yc.version}, C:\Workspace\TestNG_DataBinding\pom.xml, line 7, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TestNG_DataBinding 1.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ TestNG_DataBinding ---
+[INFO] Deleting C:\Workspace\TestNG_DataBinding\target
+[INFO] 
+[INFO] --- maven-site-plugin:3.3:site (default-site) @ TestNG_DataBinding ---
+[INFO] configuring report plugin org.apache.maven.plugins:maven-surefire-report-plugin:2.18.1
+[INFO] 
+[INFO] >>> maven-surefire-report-plugin:2.18.1:report (report:report) > [surefire]test @ TestNG_DataBinding >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ TestNG_DataBinding ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ TestNG_DataBinding ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Workspace\TestNG_DataBinding\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ TestNG_DataBinding ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Workspace\TestNG_DataBinding\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ TestNG_DataBinding ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Workspace\TestNG_DataBinding\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ TestNG_DataBinding ---
+[INFO] Surefire report directory: C:\Workspace\TestNG_DataBinding\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running core.Calc_TestNG
+Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@a294a6
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.046 sec <<< FAILURE!
+TrueorFalse_test_02(core.Calc_TestNG)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertFalse(Assert.java:63)
+	at org.testng.Assert.assertFalse(Assert.java:73)
+	at core.Calc_TestNG.TrueorFalse_test_02(Calc_TestNG.java:60)
+
+concatenate_test_03(core.Calc_TestNG)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected [QA] but found [FAQ]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at core.Calc_TestNG.concatenate_test_03(Calc_TestNG.java:70)
+
+multiply_test_05(core.Calc_TestNG)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected [25] but found [20]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at core.Calc_TestNG.multiply_test_05(Calc_TestNG.java:86)
+
+
+Results :
+
+Failed tests:   TrueorFalse_test_02(core.Calc_TestNG): expected [false] but found [true]
+  concatenate_test_03(core.Calc_TestNG): expected [QA] but found [FAQ]
+  multiply_test_05(core.Calc_TestNG): expected [25] but found [20]
+
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0
+
+[ERROR] There are test failures.
+
+Please refer to C:\Workspace\TestNG_DataBinding\target\surefire-reports for the individual test results.
+[INFO] 
+[INFO] <<< maven-surefire-report-plugin:2.18.1:report (report:report) < [surefire]test @ TestNG_DataBinding <<<
+[INFO] configuring report plugin org.apache.maven.plugins:maven-project-info-reports-plugin:2.8.1
+[INFO] configuring report plugin org.apache.maven.plugins:maven-jxr-plugin:2.5
+[INFO] Relativizing decoration links with respect to project URL: http://maven.apache.org
+[INFO] Rendering site with org.apache.maven.skins:maven-default-skin:jar:1.0 skin.
+[INFO] Skipped "Surefire Report" report, file "surefire-report.html" already exists for the English version.
+[INFO] Skipped "Source Xref" report, file "xref/index.html" already exists for the English version.
+[INFO] Skipped "Test Source Xref" report, file "xref-test/index.html" already exists for the English version.
+[INFO] Generating "Surefire Report" report    --- maven-surefire-report-plugin:2.18.1
+[INFO] Generating "Dependencies" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Dependency Convergence" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Dependency Information" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "About" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Plugin Management" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Project Plugins" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Project Summary" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Source Xref" report    --- maven-jxr-plugin:2.5
+[INFO] Generating "Test Source Xref" report    --- maven-jxr-plugin:2.5
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 21.177 s
+[INFO] Finished at: 2016-04-21T20:46:55-07:00
+[INFO] Final Memory: 23M/59M
+[INFO] ------------------------------------------------------------------------

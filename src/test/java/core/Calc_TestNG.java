@@ -94,4 +94,12 @@ public void concatenate_test_04() {
 		Assert.assertEquals(test_06.multiply(5, 5), Integer.valueOf(25));
 	   //throw new RuntimeException("Test not implemented");
   }
+  
+		//Ignore
+		  @Test(enabled = false)
+		  public void multiply_test_07() {
+			  Calc test_07 = new Calc();
+				Assert.assertEquals(test_07.multiply(5, 5), Integer.valueOf(25));
+			   //throw new RuntimeException("Test not implemented");
+  }
 }
